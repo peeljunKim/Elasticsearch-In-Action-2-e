@@ -1,0 +1,11 @@
+connectors:
+  # Elasticsearch > content -> connectors에 고유 번호
+  - connector_id: "connector_id"
+    service_type: "slack"
+
+elasticsearch:
+  host: "http://elasticsearch:9200"
+  api_key: ""
+  configuration:
+    # api.slack webhook_url
+    webhook_url: "https://hooks.slack.com/services/test/test/ccccccc"
