@@ -1,0 +1,11 @@
+spring:
+  elasticsearch:
+    uris: http://localhost:9200
+
+
+logging:
+  level:
+    # Spring Data Elasticsearch ?? ?? ?? ??
+    org.springframework.data.elasticsearch: TRACE
+    # Elasticsearch Java Client ?? ?? ?? ??
+    org.elasticsearch.client: TRACE
