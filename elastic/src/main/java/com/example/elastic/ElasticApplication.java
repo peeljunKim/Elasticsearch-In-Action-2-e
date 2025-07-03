@@ -1,8 +1,7 @@
 package com.example.elastic;
 
 //import com.example.elastic.service.HighLevelClientService;
-
-import com.example.elastic.service.JavaApiClientService;
+//import com.example.elastic.service.JavaApiClientService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -42,27 +41,27 @@ public class ElasticApplication {
 
 
     //    --------------------------  java API Client -----------------------
-    @Bean
-    public CommandLineRunner javaApiClientDemo(JavaApiClientService javaApiClientService) {
-        return args -> {
-            System.out.println("--- Java API Client Demo ---");
-            try {
-                Map<String, Object> doc = Map.of("name", "Keyboard", "price", 150.0, "layout", "US");
-                String indexedId = javaApiClientService.indexDocument("products_java_api", "1", doc);
-                log.info("Indexed document ID: {}", indexedId);
-
-                Map<String, Object> retrievedDoc = javaApiClientService.getDocument("products_java_api", "1");
-                log.info("document: {}", retrievedDoc);
-
-                Thread.sleep(1000); // 해당 코드를 추가하지 않으면, Refresh 주기 문제로 searchDocuments() 메소드가 제대로 실행이 안됨
-                // 해결 방법으로 Refresh 주기를 변경할 수 있음
-
-                List<Map> searchResults = javaApiClientService.searchDocuments("products_java_api", "Keyboard");
-                log.info("Search results for 'Keyboard': {}", searchResults);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        };
-    }
+//    @Bean
+//    public CommandLineRunner javaApiClientDemo(JavaApiClientService javaApiClientService) {
+//        return args -> {
+//            System.out.println("--- Java API Client Demo ---");
+//            try {
+//                Map<String, Object> doc = Map.of("name", "Keyboard", "price", 150.0, "layout", "US");
+//                String indexedId = javaApiClientService.indexDocument("products_java_api", "1", doc);
+//                log.info("Indexed document ID: {}", indexedId);
+//
+//                Map<String, Object> retrievedDoc = javaApiClientService.getDocument("products_java_api", "1");
+//                log.info("document: {}", retrievedDoc);
+//
+//                Thread.sleep(1000); // 해당 코드를 추가하지 않으면, Refresh 주기 문제로 searchDocuments() 메소드가 제대로 실행이 안됨
+//                // 해결 방법으로 Refresh 주기를 변경할 수 있음
+//
+//                List<Map> searchResults = javaApiClientService.searchDocuments("products_java_api", "Keyboard");
+//                log.info("Search results for 'Keyboard': {}", searchResults);
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        };
+//    }
 }

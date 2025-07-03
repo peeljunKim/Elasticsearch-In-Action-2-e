@@ -35,16 +35,16 @@ dependencies {
     implementation("org.slf4j:slf4j-api:2.0.17")
 
     // ---- Spring Data Elasticsearch 사용 시 -----
-//    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
 
     // ---  Elasticsearch High Level REST Clien (7.x 버전 대 권장)  ---
 //    implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.17.10' // Elasticsearch 버전에 맞는 버전 사용!!
 //    implementation 'org.elasticsearch:elasticsearch:7.17.10' // high-level-client와 동일한 Elasticsearch 버전 사용!
 
     // --- Java API Client (8.x부터 권장)  ---
-    implementation 'co.elastic.clients:elasticsearch-java:8.17.4'
+//    implementation 'co.elastic.clients:elasticsearch-java:8.17.4'
 //    implementation 'org.elasticsearch.client:elasticsearch-rest-client:7.17.10' // Java API Client 7.x 버전을 이용할 때는 이 라이브러리 사용해야됨
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
+//    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
 
 
 }
